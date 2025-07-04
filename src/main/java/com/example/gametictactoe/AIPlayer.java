@@ -1,5 +1,4 @@
 package com.example.gametictactoe;
-
 public class AIPlayer {
     public int[] bestMove(Board.Tile[][] board) {
         for (int y = 0; y < 3; y++) {

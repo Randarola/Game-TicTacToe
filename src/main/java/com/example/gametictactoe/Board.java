@@ -1,5 +1,4 @@
-package com.example;
-
+package com.example.gametictactoe;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.Pane;
@@ -27,8 +26,8 @@ public class Board {
         return grid;
     }
 
-    private class Tile extends StackPane {
-        private final Text text = new Text();
+    class Tile extends StackPane {
+        final Text text = new Text();
         private final int x, y;
 
         public Tile(int x, int y) {
