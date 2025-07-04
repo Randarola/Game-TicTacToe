@@ -14,5 +14,7 @@ public class Main extends Application {
         Board board = new Board();
         Scene scene = new Scene(board.createContent());
         stage.setScene(scene);
+        stage.setTitle("Tic Tac Toe");
+        stage.show();
     }
 }
