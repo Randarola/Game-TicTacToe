@@ -28,10 +28,3 @@ Projekt ten został stworzony w celu nauki:
 - **Git** jako system kontroli wersji
 - **GitHub** jako platforma hostująca repozytorium
 
----
-
-## Instalacja i uruchomienie
-
-1. Sklonuj repozytorium:
-   ```bash
-     git clone https://github.com/Randarola/Game-TicTacToe.git
