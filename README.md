@@ -23,7 +23,7 @@ Projekt ten został stworzony w celu nauki:
 
 ## Technologie
 
-- **Java 17+**
+- **Java 17**
 - **JavaFX**
 - **Git** jako system kontroli wersji
 - **GitHub** jako platforma hostująca repozytorium
