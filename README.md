@@ -1,4 +1,4 @@
-# Tic Tac Toe - Gra w JavaFX
+# Tic Tac Toe 
 
 Projekt prostej gry **Tic Tac Toe** (kółko i krzyżyk) zaimplementowanej w języku **Java** z użyciem biblioteki **JavaFX**.
 
