@@ -16,5 +16,6 @@ public class Main extends Application {
         stage.setScene(scene);
         stage.setTitle("Tic Tac Toe");
         stage.show();
+
     }
 }
