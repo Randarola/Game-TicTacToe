@@ -1,4 +1,4 @@
-package com.example.gametictactoe;
+package com.game.tictactoe;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -16,6 +16,5 @@ public class Main extends Application {
         stage.setScene(scene);
         stage.setTitle("Tic Tac Toe");
         stage.show();
-
     }
 }

@@ -3,6 +3,6 @@ module com.example.gametictactoe {
     requires javafx.fxml;
 
 
-    opens com.example.gametictactoe to javafx.fxml;
-    exports com.example.gametictactoe;
+    opens com.game.tictactoe to javafx.fxml;
+    exports com.game.tictactoe;
 }
