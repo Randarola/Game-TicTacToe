@@ -1,5 +1,6 @@
 package com.example.gametictactoe;
 
+import com.example.Board;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
@@ -11,6 +12,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) {
+        Board board = new Board();
 
     }
 }
