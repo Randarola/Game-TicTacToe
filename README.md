@@ -34,4 +34,4 @@ Projekt ten został stworzony w celu nauki:
 
 1. Sklonuj repozytorium:
    ```bash
-git clone https://github.com/Randarola/Game-TicTacToe.git
+     git clone https://github.com/Randarola/Game-TicTacToe.git
