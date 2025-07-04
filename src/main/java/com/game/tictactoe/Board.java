@@ -13,6 +13,59 @@ public class Board {
     private boolean playerTurn = true; // true = X, false = O (AI)
     private final AIPlayer ai = new AIPlayer();
 
+    private boolean checkWin(String player) {
+        // Wiersze
+        for (int y = 0; y < SIZE; y++) {
+            if (tiles[0][y].text.getText().equals(player) &&
+                    tiles[1][y].text.getText().equals(player) &&
+                    tiles[2][y].text.getText().equals(player)) {
+                return true;
+            }
+        }
+
+        // Kolumny
+        for (int x = 0; x < SIZE; x++) {
+            if (tiles[x][0].text.getText().equals(player) &&
+                    tiles[x][1].text.getText().equals(player) &&
+                    tiles[x][2].text.getText().equals(player)) {
+                return true;
+            }
+        }
+
+        // Przekątne
+        if (tiles[0][0].text.getText().equals(player) &&
+                tiles[1][1].text.getText().equals(player) &&
+                tiles[2][2].text.getText().equals(player)) {
+            return true;
+        }
+
+        if (tiles[2][0].text.getText().equals(player) &&
+                tiles[1][1].text.getText().equals(player) &&
+                tiles[0][2].text.getText().equals(player)) {
+            return true;
+        }
+
+        return false;
+    }
+    private void showAlert(String message) {
+        javafx.scene.control.Alert alert = new javafx.scene.control.Alert(javafx.scene.control.Alert.AlertType.INFORMATION);
+        alert.setTitle("Koniec gry");
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
+
+        resetBoard();
+
+    }
+    private void resetBoard(){
+        for (Tile[] row : tiles) {
+            for (Tile tile : row) {
+                tile.text.setText("");
+            }
+        }
+        playerTurn = true;
+    }
+
     public Pane createContent() {
         GridPane grid = new GridPane();
         for (int y = 0; y < SIZE; y++) {
@@ -48,18 +101,33 @@ public class Board {
             if (!text.getText().isEmpty()) {
                 return;
             }
-
             if (playerTurn) {
                 text.setText("X");
+
+                if (checkWin("X")) {
+                    showAlert("Gracz X wygrał!");
+                    return;
+                } else if (isBoardFull()) {
+                    showAlert("Remis!");
+                    return;
+                }
+
                 playerTurn = false;
 
-                if (!isBoardFull()) {
-                    int[] move = ai.bestMove(tiles);
-                    if (move != null) {
-                        tiles[move[0]][move[1]].drawO();
-                        playerTurn = true;
+                int[] move = ai.bestMove(tiles);
+                if (move != null) {
+                    tiles[move[0]][move[1]].drawO();
+
+                    if (checkWin("O")) {
+                        showAlert("Gracz O wygrał!");
+                        return;
+                    } else if (isBoardFull()) {
+                        showAlert("Remis!");
+                        return;
                     }
                 }
+
+                playerTurn = true;
             }
         }
 
