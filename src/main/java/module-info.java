@@ -1,6 +1,6 @@
 module com.example.gametictactoe {
     requires javafx.controls;
-    requires javafx.fxml;
+    //requires javafx.fxml;
     requires java.desktop;
 
 
