@@ -7,6 +7,7 @@ Projekt prostej gry **Tic Tac Toe** (kółko i krzyżyk) zaimplementowanej w ję
 ## Spis treści
 - [Opis projektu](#opis-projektu)
 - [Technologie](#technologie)
+- [Licensja](#licencja)
 - [Instalacja i uruchomienie](#instalacja-i-uruchomienie)
 
 ---
@@ -27,6 +28,10 @@ Projekt ten został stworzony w celu nauki:
 - **JavaFX**
 - **Git** jako system kontroli wersji
 - **GitHub** jako platforma hostująca repozytorium
+
+---
+## Licencja 
+MIT
 
 ---
 
