@@ -54,6 +54,16 @@ public class Board {
         alert.setContentText(message);
         alert.showAndWait();
 
+        resetBoard();
+
+    }
+    private void resetBoard(){
+        for (Tile[] row : tiles) {
+            for (Tile tile : row) {
+                tile.text.setText("");
+            }
+        }
+        playerTurn = true;
     }
 
     public Pane createContent() {
